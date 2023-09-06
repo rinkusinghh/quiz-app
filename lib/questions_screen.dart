@@ -4,13 +4,30 @@ class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
   @override
   State<QuestionsScreen> createState() {
-    return _QuestionsScreen();
+    return _QuestionsScreenState();
   }
 }
 
-class _QuestionsScreen extends State<QuestionsScreen> {
+class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(context) {
-    return const Text('Ask questions!');
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Ask question!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Answer-1')),
+          const Text('Ask question!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Answer-2')),
+          const Text('Ask question!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Answer-3')),
+          const Text('Ask question!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Answer-4')),
+          const Text('Ask question!'),
+          ElevatedButton(onPressed: () {}, child: const Text('Answer-5')),
+        ],
+      ),
+    );
   }
 }
